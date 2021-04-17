@@ -9,10 +9,6 @@ file[3]="./rosdistro/master/rosdep/sources.list.d/20-default.list"
 for f in "${file[@]}"
 do
     echo $f
-    `sed -i s@$SRC@$DES@g $f`
-    `sed -i s@/etc/ros@${PWD}@g $f`
+    `sudo sed -i s@$SRC@$DES@g $f`
+    `sudo sed -i s@/etc/ros@${PWD}@g $f`
 done
-
-# sed -i s@/etc/ros@${PWD}@g ${file[2]}
-# mkdir -p /etc/ros/
-# cp -r rosdistro /etc/ros/
